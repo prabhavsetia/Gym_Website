@@ -28,7 +28,7 @@
         }
 
         .left {
-            border: 2px solid red;
+            /* border: 2px solid red; */
             display: inline-block;
 
             position: absolute;
@@ -44,11 +44,13 @@
         }
 
         .mid {
-            border: 2px solid green;
+            /* border: 2px solid green; */
             /* display: block;
             width: 100%;
             margin: 7px auto;
             top: 0px; */
+
+            box-sizing: border-box;
 
             position: fixed;
             justify-content: center;
@@ -73,10 +75,13 @@
             justify-content: center;
 
             border: 1px solid #404040b5;
-            background-color: rgba(114, 114, 114, .2);
+
             box-shadow: 0 2px 10px #0000001a;
             border-radius: 30px;
             width: 40%;
+
+            background: rgba(114, 114, 114, .2);
+            backdrop-filter: blur(10px);
 
 
         }
@@ -91,6 +96,8 @@
         .navbar li a {
             text-decoration: none;
             color: rgb(169, 169, 169);
+            font-weight: 400;
+            font-size: 20px;
         }
 
         .navbar li a:hover {
@@ -101,7 +108,7 @@
         .content {
             padding: 20px 10px;
             margin: 250px;
-            border: 2px solid red;
+            /* border: 2px solid red; */
             display: block;
         }
 
@@ -136,7 +143,7 @@
         .membership {
             display: block;
             box-sizing: border-box;
-            border: 2px solid yellow;
+            /* border: 2px solid yellow; */
             margin: 10px 20px;
             padding: 42px 20px 0px;
             position: relative;
@@ -197,12 +204,12 @@
 
         .membership li {
 
-            padding: 10px 30px;
+            padding: 15px 30px;
             text-align: left;
             display: table-cell;
 
             font-weight: 100;
-            font-size: 18px;
+            font-size: 20px;
 
             height: 60px;
         }
@@ -213,19 +220,42 @@
 
         .btn {
             margin: 10px 0px;
-            padding: 5px;
+            /* padding: 5px; */
             bottom: 0px;
             display: block;
 
-            background-color: #f6f6f6ba;
-            border-radius: 10px;
+            /* background-color: #f6f6f6ba; */
+            /* border-radius: 10px; */
+
+            /* copy */
+            /* CSS */
+
+            background: #5E5DF0;
+            border-radius: 999px;
+            box-shadow: #5E5DF0 0 10px 20px -10px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            opacity: 1;
+            outline: 0 solid transparent;
+            padding: 8px 18px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            word-break: break-word;
+            border: 0;
+
 
         }
 
         .ourservices {
 
             box-sizing: border-box;
-            border: 2px solid yellow;
+            /* border: 2px solid yellow; */
             margin: 10px 20px;
             padding: 60px 20px 0px;
 
@@ -239,13 +269,13 @@
             unicode-bidi: isolate;
 
         }
-        
+
         .ourservices ul {
             margin: 15px;
             padding: 40px 40px;
             display: inline-grid;
             width: 272px;
-            height: 400px;
+            height: 470px;
 
             align-content: space-between;
             align-items: center;
@@ -263,6 +293,7 @@
             text-align: justify;
 
         }
+
         .ourservices h1 {
             text-align: center;
             font-weight: 100;
@@ -284,24 +315,65 @@
         }
 
 
-        .aboutus {
+        .about {
             /* box-sizing: border-box; */
-            border: 2px solid green;
-            padding: 10px 20px;
-            margin: 130px 20px 0px;
+            /* border: 2px solid green; */
+            padding: 10px 90px;
+            margin: 60px 20px 0px;
             display: inline-block;
-            width: 50%;
+            width: 100%;
 
+            text-align: center;
+            font-weight: 100;
+            font-size: 20px;
+            text-align: left;
+
+            box-sizing: border-box;
             /* margin-right: px; */
         }
 
+        .about h1 {
+            text-align: left;
+            font-weight: 100;
+            font-size: 70px;
+            margin-bottom: 40px;
+        }
+
+        .about p {
+            text-align: left;
+            font-weight: 100;
+            font-size: 20px;
+        }
+
         .contactus {
-            border: 2px solid yellow;
+            /* border: 2px solid yellow; */
             padding: 10px 20px;
             margin: 10px 20px;
-            display: inline-block;
+            ;
+            display: block;
+
+            text-align: center;
 
         }
+
+        .contactus h1 {
+            font-weight: 100;
+            font-size: 30px;
+        }
+
+        .contactus span {
+            margin: 15px;
+            padding: 15px;
+        }
+        .contactus a{
+            text-decoration: none;
+            color: white;
+        }
+        .contactus a:hover{
+            text-decoration: solid;
+            color: rgb(213, 169, 250);
+        }
+
     </style>
 </head>
 
@@ -316,8 +388,7 @@
                     <li><a href="#top">Home</a></li>
                     <li><a href="#membership">Memberships</a></li>
                     <li><a href="#ourservices">Our Services</a></li>
-                    <li><a href="#aboutus">About Us</a></li>
-                    <li><a href="#contactus">Contact Us</a></li>
+                    <li><a href="#about">About</a></li>
                 </ul>
             </div>
         </header>
@@ -412,32 +483,42 @@
         </div>
     </section>
 
-    <section id="aboutus">
-        <div class="aboutus">
-            <H3>
-                About Us
-            </H3>
+    <section id="about">
+        <div class="about">
+            <H1>
+                About
+            </H1>
             <p>
-                Welcome to Flex Fit Gym, where we're committed to helping you achieve your fitness goals and lead a
-                healthier lifestyle. Our modern facilities, expert trainers, and diverse range of fitness programs make
-                us
-                the ideal destination for anyone ready to embrace their fitness journey.
+                At Flex Fit Gym, our dedication to your fitness journey knows no bounds. We're committed to providing
+                you with the personalized workout plans, expert guidance, and motivating environment you need to
+                succeed. Our state-of-the-art facilities offer a diverse range of programs tailored to your individual
+                needs, ensuring that you have everything you need to reach your fitness goals. Join our supportive
+                community and experience firsthand the difference that Flex Fit Gym can make in your life. Ready to take
+                the first step towards a healthier you? Visit us today and let's embark on this journey together!
             </p>
         </div>
     </section>
 
     <section id="contactus">
         <div class="contactus">
-            <H3>
+            <h1>
                 Contact Us
-            </H3>
-            <ul>
+            </H1>
+            <div class="condetails">
+                <span>☏Phone: <a href="tel:+1234567890">(123) 456-7890</a></span>
+                <span>📧Email: <a href="mailto:info@flexfitgym.com">info@flexfitgym.com</a></span>
+                <span>Facebook: <a href="https://www.facebook.com/flexfitgym">Flex Fit Gym</a></span>
+                <span>Instagram: <a href="https://www.instagram.com/flexfitgym">flexfitgym</a></span>
+                <span>Twitter: <a href="https://twitter.com/FlexFitGym">FlexFitGym</a></span>
+            </div>
+
+            <!-- <ul>
                 <li>Phone: (123) 456-7890</li>
                 <li>Email: info@flexfitgym.com</li>
                 <li>Facebook: Flex Fit Gym</li>
                 <li>Instagram: flexfitgym</li>
                 <li>Twitter: FlexFitGym</li>
-            </ul>
+            </ul> -->
         </div>
     </section>
 </body>
