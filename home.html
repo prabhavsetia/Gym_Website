@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prabhav's FlexFit Gym</title>
+    <link rel="stylesheet" href="Css/style.Css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            padding: 0px;
+            margin: 0px;
+
+            background: url(Img/anastase-maragos-4dlhin0ghOk-unsplash.jpg);
+            background-color: black;
+            background-repeat: no-repeat;
+            height: 3000px;
+            background-size: 100% auto;
+            color: white;
+            font-family: "Roboto", sans-serif;
+        }
+
+        .left {
+            border: 2px solid red;
+            display: inline-block;
+
+            position: absolute;
+            top: 0px;
+            left: 20px;
+
+
+        }
+
+        .left img {
+            filter: invert();
+            width: 100px;
+        }
+
+        .mid {
+            border: 2px solid green;
+            /* display: block;
+            width: 100%;
+            margin: 7px auto;
+            top: 0px; */
+
+            position: fixed;
+            justify-content: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 3;
+            display: flex;
+            margin-top: 15px;
+            justify-content: center;
+            align-items: center;
+            /* -webkit-user-select: none; */
+            /* user-select: none; */
+
+        }
+
+        .navbar {
+            display: flex;
+            align-content: stretch;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+
+            border: 1px solid #404040b5;
+            background-color: rgba(114, 114, 114, .2);
+            box-shadow: 0 2px 10px #0000001a;
+            border-radius: 30px;
+            width: 40%;
+
+
+        }
+
+        .navbar li {
+            display: inline-block;
+            padding: 15px;
+            font-size: 20px;
+
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: rgb(169, 169, 169);
+        }
+
+        .navbar li a:hover {
+            cursor: pointer;
+            color: white;
+        }
+
+        .content {
+            padding: 20px 10px;
+            margin: 250px;
+            border: 2px solid red;
+            display: block;
+        }
+
+        .front {
+            box-sizing: border-box;
+        }
+
+        .front h1 {
+            /* took it from miraya */
+            font-family: "Roboto", sans-serif;
+            font-weight: 800;
+            font-size: 130px;
+            background: -webkit-linear-gradient(#c758ff, #efefef);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            text-align: center;
+
+            padding: 10px 20px;
+            margin: 10px 20px;
+        }
+
+
+        .front p {
+            font-family: "Roboto", sans-serif;
+            font-weight: 200;
+            font-size: 30px;
+            padding: 10px 30%;
+            text-align: center;
+        }
+
+        .membership {
+            display: block;
+            box-sizing: border-box;
+            border: 2px solid yellow;
+            margin: 10px 20px;
+            padding: 42px 20px 0px;
+            position: relative;
+            text-align: center;
+            unicode-bidi: isolate;
+
+        }
+
+        .membership ul {
+            margin: 15px;
+            padding: 40px 40px;
+            display: inline-grid;
+            width: 272px;
+            height: auto;
+
+            align-content: space-between;
+            align-items: center;
+            justify-content: end;
+            justify-items: stretch;
+
+            border: 1px solid grey;
+            border-radius: 70px;
+        }
+
+        .membership h1 {
+            text-align: center;
+            font-weight: 100;
+            font-size: 50px;
+
+
+        }
+
+        .membership h2 {
+            text-align: center;
+            font-weight: 100;
+            font-size: 35px;
+            margin-bottom: 15px;
+
+        }
+
+        .membership h3 {
+            text-align: center;
+            font-weight: 100;
+            font-size: 30px;
+            margin: 10px;
+
+        }
+
+        .membership p {
+            text-align: center;
+            font-weight: 100;
+            font-size: 30px;
+            margin: 15px;
+
+            margin-top: 9px;
+            margin-bottom: 25px;
+        }
+
+        .membership li {
+
+            padding: 10px 30px;
+            text-align: left;
+            display: table-cell;
+
+            font-weight: 100;
+            font-size: 18px;
+
+            height: 60px;
+        }
+
+        .membership li::marker {
+            color: white;
+        }
+
+        .btn {
+            margin: 10px 0px;
+            padding: 5px;
+            bottom: 0px;
+            display: block;
+
+            background-color: #f6f6f6ba;
+            border-radius: 10px;
+
+        }
+
+        .ourservices {
+
+            box-sizing: border-box;
+            border: 2px solid yellow;
+            margin: 10px 20px;
+            padding: 60px 20px 0px;
+
+            font-weight: 100;
+            font-size: 70px;
+            text-align: center;
+
+            display: block;
+
+            position: relative;
+            unicode-bidi: isolate;
+
+        }
+        
+        .ourservices ul {
+            margin: 15px;
+            padding: 40px 40px;
+            display: inline-grid;
+            width: 272px;
+            height: 400px;
+
+            align-content: space-between;
+            align-items: center;
+            justify-content: end;
+            justify-items: stretch;
+
+            border: 1px solid grey;
+            border-radius: 70px;
+        }
+
+        .ourservices li {
+            display: table-cell;
+            text-decoration: none;
+            padding: 10px 30px;
+            text-align: justify;
+
+        }
+        .ourservices h1 {
+            text-align: center;
+            font-weight: 100;
+            font-size: 70px;
+        }
+
+        .ourservices h2 {
+            text-align: center;
+            font-weight: 100;
+            font-size: 40px;
+            vertical-align: top;
+        }
+
+        .ourservices p {
+            text-align: center;
+            font-weight: 100;
+            font-size: 20px;
+            text-align: justify;
+        }
+
+
+        .aboutus {
+            /* box-sizing: border-box; */
+            border: 2px solid green;
+            padding: 10px 20px;
+            margin: 130px 20px 0px;
+            display: inline-block;
+            width: 50%;
+
+            /* margin-right: px; */
+        }
+
+        .contactus {
+            border: 2px solid yellow;
+            padding: 10px 20px;
+            margin: 10px 20px;
+            display: inline-block;
+
+        }
+    </style>
+</head>
+
+<body>
+    <section id="home">
+        <header class="header">
+            <div class="left">
+                <img src="Img/Logo_Site.png" alt="">
+            </div>
+            <div class="mid">
+                <ul class="navbar">
+                    <li><a href="#top">Home</a></li>
+                    <li><a href="#membership">Memberships</a></li>
+                    <li><a href="#ourservices">Our Services</a></li>
+                    <li><a href="#aboutus">About Us</a></li>
+                    <li><a href="#contactus">Contact Us</a></li>
+                </ul>
+            </div>
+        </header>
+    </section>
+    <div class="content">
+        <div class="front">
+            <H1>Flex Fit Gym</H1>
+            <p>Achieve your fitness goals with us!</p>
+        </div>
+    </div>
+    <section id="membership">
+        <div class="membership">
+            <h1>Memberships</h1>
+            <ul>
+                <h2>1-Month Membership</h2>
+                <h3>Price: $50</h3>
+                <p>Services Included:</p>
+                <li>Access to all gym facilities</li>
+                <li>Unlimited group fitness classes</li>
+                <li>Initial fitness assessment</li>
+                <li>Discounted rates on personal training sessions</li>
+                <button class="btn">Join Now</button>
+            </ul>
+            <ul>
+                <h2>3-Month Membership</h2>
+                <h3>Price: $120</h3>
+                <p>Services Included:</p>
+                <li>All benefits of the 1-month membership, plus:</li>
+                <li>Weekly one-on-one personal training session</li>
+                <li></li>
+                <li></li>
+                <button class="btn">Join Now</button>
+            </ul>
+            <ul>
+                <h2>6-Month Membership</h2>
+                <h3>Price: $120</h3>
+                <p>Services Included:</p>
+                <li>All benefits of the 3-month membership, plus: </li>
+                <li>Bi-weekly one-on-one personal training sessions</li>
+                <li>Nutrition counseling session</li>
+                <li></li>
+                <button class="btn">Join Now</button>
+            </ul>
+            <ul>
+                <h2>12-Month Membership</h2>
+                <h3>Price: $120</h3>
+                <p>Services Included:</p>
+                <li>All benefits of the 6-month membership, plus:</li>
+                <li>Monthly body composition analysis</li>
+                <li>Exclusive access to member-only events and workshops</li>
+                <li></li>
+                <button class="btn">Join Now</button>
+            </ul>
+        </div>
+    </section>
+    <section id="ourservices">
+        <div class="ourservices">
+            <h1>Our Services</h1>
+            <ul>
+                <h2>Personal Training</h2>
+                <li>
+                    <p>Experience personalized workout plans crafted by our certified trainers to suit your unique
+                        fitness goals. Whether it's weight loss, muscle gain, or overall fitness improvement, our
+                        trainers are here to support and motivate you every step of the way.</p>
+                </li>
+            </ul>
+            <ul>
+                <h2>Group Fitness Classes</h2>
+                <li>
+                    <p>Join our dynamic group fitness classes designed to challenge and inspire you. From high-energy
+                        cardio sessions to mind-body workouts like yoga and pilates, there's something for everyone at
+                        Flex Fit Gym.
+                    </p>
+                </li>
+            </ul>
+            <ul>
+                <h2>Nutrition Guidance</h2>
+                <li>
+                    <p>Achieving your fitness goals requires a balanced approach, and our nutrition experts are here to
+                        help. Receive personalized nutrition guidance and meal plans to fuel your workouts and optimize
+                        your results.</p>
+                </li>
+            </ul>
+            <ul>
+                <h2>Facilities</h2>
+                <li>
+                    <p>Explore our state-of-the-art facilities equipped with the latest in fitness technology. From
+                        cardio machines and free weights to functional training areas and group exercise studios, Flex
+                        Fit Gym has everything you need to crush your fitness goals.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="aboutus">
+        <div class="aboutus">
+            <H3>
+                About Us
+            </H3>
+            <p>
+                Welcome to Flex Fit Gym, where we're committed to helping you achieve your fitness goals and lead a
+                healthier lifestyle. Our modern facilities, expert trainers, and diverse range of fitness programs make
+                us
+                the ideal destination for anyone ready to embrace their fitness journey.
+            </p>
+        </div>
+    </section>
+
+    <section id="contactus">
+        <div class="contactus">
+            <H3>
+                Contact Us
+            </H3>
+            <ul>
+                <li>Phone: (123) 456-7890</li>
+                <li>Email: info@flexfitgym.com</li>
+                <li>Facebook: Flex Fit Gym</li>
+                <li>Instagram: flexfitgym</li>
+                <li>Twitter: FlexFitGym</li>
+            </ul>
+        </div>
+    </section>
+</body>
+
+</html>
