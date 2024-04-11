@@ -25,6 +25,12 @@ FlexFit Gym is a virtual representation of a fitness center, where users can exp
 
 To view the website, simply open the `index.html` file in your web browser. You can also explore the project files to understand the structure and styling applied.
 
+## 🍿Video
+
+https://github.com/prabhavsetia/Gym_Website/assets/74399984/5eac4a54-4dd7-4f97-aa55-71cd229113aa
+
+
+
 ## Credits
 
 - Background image by [Anastase Maragos](https://unsplash.com/photos/4dlhin0ghOk)
