@@ -21,7 +21,7 @@
             background: url(Img/anastase-maragos-4dlhin0ghOk-unsplash.jpg);
             background-color: black;
             background-repeat: no-repeat;
-            height: 3000px;
+            height: 2900px;
             background-size: 100% auto;
             color: white;
             font-family: "Roboto", sans-serif;
@@ -345,35 +345,36 @@
             font-size: 20px;
         }
 
-        .contactus {
-            /* border: 2px solid yellow; */
-            padding: 10px 20px;
+        footer {
             margin: 10px 20px;
-            ;
-            display: block;
-
-            text-align: center;
-
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
         }
 
-        .contactus h1 {
-            font-weight: 100;
-            font-size: 30px;
+        footer .copyright {
+            float: left;
         }
-
-        .contactus span {
+        footer .copyright span{
             margin: 15px;
             padding: 15px;
         }
-        .contactus a{
-            text-decoration: none;
-            color: white;
+
+        footer .contact-info {
+            float: right;
         }
-        .contactus a:hover{
+        footer .contact-info span{
+            margin:  0px 20px;
+            padding: 10px 0px;
+        }
+        footer a{
+            text-decoration: none;
+            color: white;    
+        }
+        footer a:hover {
             text-decoration: solid;
             color: rgb(213, 169, 250);
         }
-
     </style>
 </head>
 
@@ -499,28 +500,16 @@
         </div>
     </section>
 
-    <section id="contactus">
-        <div class="contactus">
-            <h1>
-                Contact Us
-            </H1>
-            <div class="condetails">
-                <span>☏Phone: <a href="tel:+1234567890">(123) 456-7890</a></span>
-                <span>📧Email: <a href="mailto:info@flexfitgym.com">info@flexfitgym.com</a></span>
-                <span>Facebook: <a href="https://www.facebook.com/flexfitgym">Flex Fit Gym</a></span>
-                <span>Instagram: <a href="https://www.instagram.com/flexfitgym">flexfitgym</a></span>
-                <span>Twitter: <a href="https://twitter.com/FlexFitGym">FlexFitGym</a></span>
-            </div>
-
-            <!-- <ul>
-                <li>Phone: (123) 456-7890</li>
-                <li>Email: info@flexfitgym.com</li>
-                <li>Facebook: Flex Fit Gym</li>
-                <li>Instagram: flexfitgym</li>
-                <li>Twitter: FlexFitGym</li>
-            </ul> -->
+    <footer>
+        <span class="copyright">© 2024 Prabhav Setia</span>
+        <div class="contact-info">
+            <span>☏ Phone: <a href="tel:+1234567890">(123) 456-7890</a></span>
+            <span>📧 Email: <a href="mailto:info@flexfitgym.com">info@flexfitgym.com</a></span>
+            <span>Facebook: <a href="https://www.facebook.com/flexfitgym">Flex Fit Gym</a></span>
+            <span>Instagram: <a href="https://www.instagram.com/flexfitgym">flexfitgym</a></span>
+            <span>Twitter: <a href="https://twitter.com/FlexFitGym">FlexFitGym</a></span>
         </div>
-    </section>
+    </footer>
 </body>
 
 </html>
